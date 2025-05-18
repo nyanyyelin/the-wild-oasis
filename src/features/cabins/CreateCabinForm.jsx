@@ -45,6 +45,7 @@ const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
   };
   return (
     // need our own function to call handleSubmit
+    // FormProvider is not really necessary here
     <FormProvider {...methods}>
       <Form
         onSubmit={handleSubmit(onSubmit, onError)}
