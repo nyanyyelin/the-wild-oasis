@@ -1,7 +1,5 @@
 // import styled from "styled-components";
 
-import { useFormContext } from 'react-hook-form';
-
 // const FileInput = styled.input`
 //   font-size: 1.4rem;
 //   border-radius: var(--border-radius-sm);
@@ -24,18 +22,35 @@ import { useFormContext } from 'react-hook-form';
 //   }
 // `;
 
-const FileInput = ({ isEditSession }) => {
-  const { register } = useFormContext();
+// const FileInput = ({ isEditSession }) => {
+//   const { register } = useFormContext();
+//   return (
+//     <input
+//       type="file"
+//       id="image"
+//       accept="image/*"
+//       className="block text-sm text-gray-500 file:cursor-pointer file:rounded-md file:border-2 file:border-gray-200 file:px-3 file:py-2 file:duration-200 hover:file:bg-gray-600 hover:file:text-gray-50"
+//       {...register('image', {
+//         required: isEditSession ? false : 'This field is required',
+//       })}
+//     />
+//   );
+// };
+
+import { forwardRef } from 'react';
+
+const FileInput = forwardRef(({ isEditSession, ...rest }, ref) => {
   return (
     <input
       type="file"
       id="image"
       accept="image/*"
+      {...rest}
+      ref={ref}
       className="block text-sm text-gray-500 file:cursor-pointer file:rounded-md file:border-2 file:border-gray-200 file:px-3 file:py-2 file:duration-200 hover:file:bg-gray-600 hover:file:text-gray-50"
-      {...register('image', {
-        required: isEditSession ? false : 'This field is required',
-      })}
     />
   );
-};
+});
+
+FileInput.displayName = 'FileInput';
 export default FileInput;
