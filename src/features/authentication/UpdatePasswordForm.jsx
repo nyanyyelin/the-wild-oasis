@@ -2,8 +2,7 @@ import { useForm } from 'react-hook-form';
 import Button from '../../ui/Button';
 import Form from '../../ui/Form';
 import FormRow from '../../ui/FormRow';
-
-import { useUpdateUser } from './useUpdateUser';
+import useUpdateUser from './useUpdateUser';
 
 function UpdatePasswordForm() {
   const { register, handleSubmit, formState, getValues, reset } = useForm();
@@ -18,7 +17,7 @@ function UpdatePasswordForm() {
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <FormRow
-        label="Password (min 8 characters)"
+        label="New password (min 8 characters)"
         error={errors?.password?.message}
       >
         <input
@@ -47,7 +46,6 @@ function UpdatePasswordForm() {
           id="passwordConfirm"
           disabled={isUpdating}
           className="rounded-md border-1 bg-white px-2 py-2 text-base"
-          z
           {...register('passwordConfirm', {
             required: 'This field is required',
             validate: (value) =>

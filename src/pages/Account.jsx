@@ -1,6 +1,7 @@
 // import Heading from '../../ui/Heading';
 // import Row from '../../ui/Row';
 
+import UpdatePasswordForm from '../features/authentication/UpdatePasswordForm';
 import UpdateUserDataForm from '../features/authentication/UpdateUserDataForm';
 
 // function Account() {
@@ -24,13 +25,13 @@ import UpdateUserDataForm from '../features/authentication/UpdateUserDataForm';
 const Account = () => {
   return (
     <>
-      <h1>Update your account</h1>
-      <div>
-        <h3>Update user data</h3>
+      <div className="flex flex-col gap-4">
+        <h3 className="text-xl">Update user data</h3>
         <UpdateUserDataForm />
       </div>
-      <div>
-        <h3>Update user password</h3>
+      <div className="flex flex-col gap-4">
+        <h3 className="text-xl">Update user password</h3>
+        <UpdatePasswordForm />
       </div>
     </>
   );

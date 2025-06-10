@@ -20,7 +20,7 @@ const Input = ({
       onChange={onChange}
       autoComplete={autoComplete}
       value={value}
-      className="rounded-md border-1 bg-white px-2 py-2 text-base"
+      className={`rounded-md border-1 px-2 py-2 text-base ${disabled ? 'bg-gray-400' : 'bg-white'}`}
     />
   );
 };

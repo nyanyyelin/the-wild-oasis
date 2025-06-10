@@ -47,7 +47,7 @@ const FileInput = forwardRef(({ isEditSession, ...rest }, ref) => {
       accept="image/*"
       {...rest}
       ref={ref}
-      className="block text-sm text-gray-500 file:cursor-pointer file:rounded-md file:border-2 file:border-gray-200 file:px-3 file:py-2 file:duration-200 hover:file:bg-gray-600 hover:file:text-gray-50"
+      className="block text-sm file:cursor-pointer file:rounded-md file:border-2 file:bg-violet-600 file:px-3 file:py-2 file:text-white file:duration-200 hover:file:bg-violet-700 hover:file:text-gray-50"
     />
   );
 });
