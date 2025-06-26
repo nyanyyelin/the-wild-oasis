@@ -9,10 +9,8 @@ const ToggleDarkMode = () => {
     const root = window.document.documentElement;
     if (isDark === 'dark') {
       root.classList.add('dark');
-      console.log(root);
     } else {
       root.classList.remove('dark');
-      console.log('Not dark');
     }
   }, [isDark]);
 
