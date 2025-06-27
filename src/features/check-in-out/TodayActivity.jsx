@@ -1,4 +1,5 @@
 import { useTodayActivity } from './useTodayActivity';
+import TodayItem from './TodayItem';
 
 // const StyledToday = styled.div`
 //   /* Box */
@@ -34,12 +35,27 @@ import { useTodayActivity } from './useTodayActivity';
 // `;
 
 const TodayActivity = () => {
-  const { isPending, stays } = useTodayActivity();
+  const { isPending, activities } = useTodayActivity();
   return (
     <div className="col-span-2 col-start-1 flex flex-col gap-3 rounded-md border border-gray-100 bg-gray-50 p-5 pt-2">
       <div className="flex">
         <h2>Today</h2>
       </div>
+      {!isPending ? (
+        activities?.length > 0 ? (
+          <ul className="[scrollbar-width:none][&::-webkit-scrollbar]:!w-0 overflow-auto overflow-x-hidden [-ms-overflow-style:none]">
+            {activities.map((activity) => (
+              <TodayItem activity={activity} key={activity.id} />
+            ))}
+          </ul>
+        ) : (
+          <p className="font-base mt-2 text-center font-semibold">
+            No Activity Today.
+          </p>
+        )
+      ) : (
+        'Loading...'
+      )}
     </div>
   );
 };

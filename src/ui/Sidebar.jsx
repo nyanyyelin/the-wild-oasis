@@ -7,7 +7,7 @@ const Sidebar = () => {
     <aside className="row-span-full border-r-1 border-r-gray-100 bg-gray-50 px-4 py-3">
       <Logo />
       <MainNav />
-      <Uploader />
+      {/* <Uploader /> */}
     </aside>
   );
 };

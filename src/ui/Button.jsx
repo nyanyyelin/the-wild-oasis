@@ -1,5 +1,5 @@
 const sizes = {
-  small: 'text-sm px-1 py-1.5 uppercase font-semibold text-center',
+  small: 'text-sm px-0.5 py-1 uppercase font-semibold text-center',
   medium: 'text-base px-2 py-2.5 font-medium',
   large: 'text-xl px-3 py-3.5 font-medium',
 };

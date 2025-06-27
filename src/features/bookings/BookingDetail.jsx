@@ -4,6 +4,7 @@ import BookingDataBox from './BookingDataBox';
 import ButtonGroup from '../../ui/ButtonGroup';
 import ButtonText from '../../ui/ButtonText';
 
+import Empty from '../../ui/Empty';
 import { useMoveBack } from '../../hooks/useMoveBack';
 import useBooking from './useBooking';
 import { useNavigate } from 'react-router-dom';
@@ -20,6 +21,7 @@ function BookingDetail() {
   const moveBack = useMoveBack();
 
   if (isPending) return <div>Loading... </div>;
+  if (!booking) return <Empty resourceName="booking" />;
   const { status, id: bookingId } = booking;
 
   const statusToTagName = {
