@@ -39,7 +39,7 @@
 
 import { forwardRef } from 'react';
 
-const FileInput = forwardRef(({ isEditSession, ...rest }, ref) => {
+const FileInput = forwardRef(({ ...rest }, ref) => {
   return (
     <input
       type="file"

@@ -14,7 +14,8 @@ const DashboardLayout = () => {
   } = useRecentStays();
   const { cabins, isPending: isPendingCabins } = useCabins();
 
-  if (isPending || isPendingStays) return <div>Loading...</div>;
+  if (isPending || isPendingStays || isPendingCabins)
+    return <div>Loading...</div>;
 
   return (
     <div className="grid grid-cols-[1fr_1fr_1fr_1fr] grid-rows-[auto_34rem_auto] gap-4">

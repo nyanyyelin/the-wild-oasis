@@ -10,8 +10,6 @@ import useBooking from '../bookings/useBooking';
 import { formatCurrency } from '../../utils/helpers';
 import { useCheckin } from './useCheckin';
 import useSettings from '../settings/useSetttings';
-import { format } from 'date-fns';
-import { check } from 'prettier';
 
 function CheckinBooking() {
   const [confirmPaid, setConfirmPaid] = useState(false);

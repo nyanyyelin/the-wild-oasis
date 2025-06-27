@@ -14,11 +14,9 @@ import ConfirmDelete from '../../ui/ConfirmDelete';
 function BookingRow({
   booking: {
     id: bookingId,
-    created_at,
     startDate,
     endDate,
     numNights,
-    numGuests,
     totalPrice,
     status,
     guests: { fullName: guestName, email },
@@ -27,7 +25,7 @@ function BookingRow({
 }) {
   const navigate = useNavigate();
   const { checkout, isCheckingout } = useCheckout();
-  const { deleteBooking, isDeleting } = useDeleteBooking();
+  const { deleteBooking } = useDeleteBooking();
 
   const statusToTagName = {
     unconfirmed: 'blue',

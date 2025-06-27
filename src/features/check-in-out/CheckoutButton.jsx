@@ -1,4 +1,3 @@
-import { check } from 'prettier';
 import Button from '../../ui/Button';
 import { useCheckout } from './useCheckout';
 
